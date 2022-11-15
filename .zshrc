@@ -116,7 +116,7 @@ alias nd="nvim ."
 
 # Load Homebrew config script
 source $HOME/.brewconfig.zsh
-export PATH=$PATH:/Users/omanie/.brew/Cellar/llvm/15.0.2/bin
+export PATH=$PATH:/Users/omanie/.brew/Cellar/llvm/15.0.4/bin
 prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
     prompt_segment black default "%(!.%{%F{yellow}%}.)$DEFAULT_USER"
@@ -125,3 +125,4 @@ prompt_context() {
 # export CPLUS_INCLUDE_PATH=/Library/Developer/CommandLineTools/usr/include/c++/v1/
 export PATH=$PATH:/Library/PostgreSQL/15/bin
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+export LANG=en_US.UTF-8
