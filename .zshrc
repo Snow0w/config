@@ -109,14 +109,14 @@ alias vim=/Users/omanie/.brew/bin/vim
 USER=omanie
 export USER
 
-alias nvimconf="nvim ~/.config/nvim/init.vim"
+alias nvimconf="nvim ~/.config/nvim"
 alias zshconf="nvim ~/.zshrc"
 alias n="nvim"
 alias nd="nvim ."
 
 # Load Homebrew config script
 source $HOME/.brewconfig.zsh
-export PATH=$PATH:/Users/omanie/.brew/Cellar/llvm/15.0.4/bin
+export PATH=/Users/omanie/.brew/opt/llvm/bin:$PATH
 prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
     prompt_segment black default "%(!.%{%F{yellow}%}.)$DEFAULT_USER"
@@ -126,3 +126,10 @@ prompt_context() {
 export PATH=$PATH:/Library/PostgreSQL/15/bin
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 export LANG=en_US.UTF-8
+# export PATH=/Users/kirill/.brew/Cellar/openjdk/19.0.1/bin:$PATH
+# export JAVA_HOME=/Users/kirill/.brew/Cellar/openjdk/19.0.1
+export PATH=/Users/kirill/.brew/opt/openjdk@17/bin:$PATH
+export JAVA_HOME=/Users/kirill/.brew/opt/openjdk@17
+export PATH=$PATH:/Users/kirill/.brew/Cellar/python@3.11/3.11.0/bin/
+alias python=python3.11
+alias pip=pip3.11

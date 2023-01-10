@@ -45,7 +45,11 @@ keymap.set("n", "te", ":tabfind<Space>")
 keymap.set("n", "<leader>w", ":w!<cr>")
 keymap.set("n", "<leader>q", ":q<cr>")
 
-
+--size window
+keymap.set("n", "<C-,>", "<C-W><")
+keymap.set("n", "<C-.>", "<C-W>>")
+keymap.set("n", "<C-<>", "<C-W>-")
+keymap.set("n", "<C->>", "<C-W>+")
 ---------------------
 -- General Keymaps
 ---------------------
@@ -66,3 +70,10 @@ keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in 
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
+
+--luasnip
+-- vim.cmd('')
+--imap <silent><expr> <Tab> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<Tab>'
+-- vim.api.nvim_set_keymap("s", "<Tab>", "<cmd>lua require('luasnip').jump(1)<Cr>", {})
+-- vim.api.nvim_set_keymap("i", "<S-Tab>", "<cmd>lua require('luasnip').jump(-1)<Cr>", {})
+-- vim.api.nvim_set_keymap("s", "<S-Tab>", "<cmd>lua require('luasnip').jump(-1)<Cr>", {})
